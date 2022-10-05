@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script type="text/javascript" src="js/script.js"></script>
+	<title>JavaScript</title>
+</head>
+<body>
+	<script>
+		/*
+		var x = 80;
+		var y = "80";
+
+		alert(x !== y );*/
+
+		/*
+		for(i=1000; i>1; i-=2){
+			document.write(i + "<br />")	
+		}*/
+
+		/*
+		if(true){
+			for(i=1;1<10;i++){
+				document.write("Teste 01");
+			}
+		}
+		else{
+			 if(true)
+				document.write("Teste 02");
+			else
+				Teste;
+		}
+		*/
+
+		function verificar(){
+			try{
+				var x=document.getElementById("valor").value;
+				if (x== "")		throw "Campo vazio";
+				if(isNaN(x))	throw "Não é um número valido";
+				if(x > 10)		throw "Alto demais";
+				if(x < 5)		throw "Baixo demais";
+				document.getElementById("mesg").innerHTML = "Numero aceito";
+			}catch(err) {
+				var y=document.getElementById("mesg");
+				y.innerHTML="Erro: " + err + ".";
+			}
+		}
+
+	</script>
+
+</body>
+
+<h1>Execeções</h1>
+<p>Digite um número entre 5 e 10:</p>
+<input id="valor" type="text">
+<button type="button" onclick="verificar()">Testar</button>
+<p id="mesg"></p>
+
+</body>
+</html>

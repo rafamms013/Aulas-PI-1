@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script type="text/javascript" src="js/script.js"></script>
+	<title>JavaScript</title>
+</head>
+
+<body id="corpo">
+	<h1>Adicionar elemento</h1>
+	<p>Digite o texto
+		<input type="text" id="texto">
+	</p>
+
+	<p>
+		<button onclick="adicionar()">Adicionar</button>
+	</p>
+
+	<p id="p01">
+		<input type="file">
+		<button onclick="AdicionarFile()">+</button>
+	</p>
+
+	<script>
+		function Adicionar() {
+			var texto = document.getElementById("texto");
+			var para = document.createElement("p");
+			para.innerHTML = texto.value;
+			var corpo = document.getElementById("corpo");
+			corpo.appendChild(para);
+			texto.value = "";
+		}
+
+
+		function AdicionarFile() {
+			var file = document.createElement("input");
+			file.type = "file";
+			var p = document.getElementById("p01");
+			p.appendChild(file);                      
+			var br = document.createElement(br);
+			p.appendChild(file);
+		
+
+		}
+	</script>
+
+
+</body>
+</html>
